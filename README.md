@@ -1,27 +1,15 @@
+<img src="https://raw.githubusercontent.com/qupaya/assets/master/logo/logo-full.svg" alt="dark qupaya logo with font" width="50" align="right">
+
+<br>
+
 # DateRangePickerCustomRanges
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+This repository shows how to add custom range selection buttons to the Angular Material Date Range Picker.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+From [qupaya](https://www.qupaya.com/) with 🖤️.
 
-## Code scaffolding
+Follow Us: [Twitter](twitter.com/qupaya) | [LinkedIn](linkedin.com/company/qupaya)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<img src="https://raw.githubusercontent.com/qupaya/assets/master/logo/logo-full.svg" alt="dark qupaya logo with font" width="50" align="right">
