@@ -8,10 +8,13 @@ import { ExampleHeaderComponent } from './example-header/example-header.componen
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  customHeader = ExampleHeaderComponent;
+  // make ExampleHeaderComponent type available in our template:
+  readonly ExampleHeaderComponent = ExampleHeaderComponent;
 
   range = new FormGroup({
     start: new FormControl(),
     end: new FormControl(),
   });
+
+  isTouchUIActivated = false;
 }

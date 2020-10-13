@@ -1,9 +1,7 @@
 $width: 128px;
 
 :host {
-  display: block;
   position: absolute;
   width: $width;
-  left: -$width;
-  top: 0;
+  left: -$width; // to render it on the right side, use "right: -$width" instead
 }

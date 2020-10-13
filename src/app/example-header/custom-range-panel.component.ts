@@ -11,7 +11,10 @@ const customPresets = [
   'last week',
   'last month',
   'last year',
-] as const;
+] as const; // convert to readonly tuple of string literals
+
+// equivalent to "today" | "last 7 days" | ... | "last year"
+type CustomPreset = typeof customPresets[number];
 
 @Component({
   selector: 'app-custom-range-panel',
@@ -20,6 +23,7 @@ const customPresets = [
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CustomRangePanelComponent<D> {
+  // list of range presets we want to provide:
   readonly customPresets = customPresets;
 
   constructor(
@@ -27,16 +31,15 @@ export class CustomRangePanelComponent<D> {
     private picker: MatDateRangePicker<D>
   ) {}
 
-  selectRange(rangeName: typeof customPresets[number]): void {
+  // called when user selects a range preset:
+  selectRange(rangeName: CustomPreset): void {
     const [start, end] = this.calculateDateRange(rangeName);
     this.picker.select(start);
     this.picker.select(end);
     this.picker.close();
   }
 
-  private calculateDateRange(
-    rangeName: typeof customPresets[number]
-  ): [start: D, end: D] {
+  private calculateDateRange(rangeName: CustomPreset): [start: D, end: D] {
     const today = this.today;
     const year = this.dateAdapter.getYear(today);
 
@@ -71,9 +74,13 @@ export class CustomRangePanelComponent<D> {
         const end = this.dateAdapter.createDate(year - 1, 11, 31);
         return [start, end];
       }
+      default:
+        // exhaustiveness check;
+        // rangeName has type never, if every possible value is handled in the switch cases.
+        // Otherwise, the following line will result in compiler error:
+        // "Type 'string' is not assignable to type '[start: D, end: D]'"
+        return rangeName;
     }
-
-    ((param: never) => {})(rangeName); // exhaustiveness check
   }
 
   private calculateMonth(forDay: D): [start: D, end: D] {

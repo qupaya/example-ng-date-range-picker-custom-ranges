@@ -7,8 +7,17 @@
   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
   <mat-date-range-picker
     #picker
-    [calendarHeaderComponent]="customHeader"
+    [calendarHeaderComponent]="ExampleHeaderComponent"
+    [touchUi]="isTouchUIActivated"
   ></mat-date-range-picker>
 </mat-form-field>
+
+<div>
+  <input
+    id="touchUiCheckbox"
+    type="checkbox"
+    (change)="isTouchUIActivated = !isTouchUIActivated"
+  /><label for="touchUiCheckbox">activate touch UI?</label>
+</div>
 
 <p>Selected range: {{ range.value | json }}</p>

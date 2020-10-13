@@ -1,6 +1,7 @@
 <app-custom-range-panel></app-custom-range-panel>
 
 <div class="example-header">
+  <!-- "previous" buttons -->
   <button
     mat-icon-button
     class="example-double-arrow"
@@ -12,7 +13,11 @@
   <button mat-icon-button (click)="previousClicked('month')">
     <mat-icon>keyboard_arrow_left</mat-icon>
   </button>
+
+  <!-- center label -->
   <span class="example-header-label">{{ periodLabel }}</span>
+
+  <!-- "next" buttons -->
   <button mat-icon-button (click)="nextClicked('month')">
     <mat-icon>keyboard_arrow_right</mat-icon>
   </button>
