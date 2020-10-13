@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 import { DateAdapter } from '@angular/material/core';
 import { MatDateRangePicker } from '@angular/material/datepicker';
 
@@ -25,6 +25,8 @@ type CustomPreset = typeof customPresets[number];
 export class CustomRangePanelComponent<D> {
   // list of range presets we want to provide:
   readonly customPresets = customPresets;
+  @HostBinding('class.touch-ui')
+  readonly isTouchUi = this.picker.touchUi;
 
   constructor(
     private dateAdapter: DateAdapter<D>,
