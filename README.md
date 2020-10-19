@@ -5,6 +5,7 @@
 # Example: Angular Material Date Range Picker with Custom Ranges
 
 This repository shows how to add custom range selection buttons to the Angular Material Date Range Picker.
+It contains all example code for our [Blog post "Angular Date Range Picker with Custom Range Presets"](https://www.qupaya.com/blog/date-range-picker-custom-ranges).
 
 ![screenshot of the customized date range picker](./screenshot.png)
 
@@ -12,4 +13,4 @@ This repository shows how to add custom range selection buttons to the Angular M
 
 From [qupaya](https://www.qupaya.com/) with 🖤️
 
-Follow Us: [Twitter](twitter.com/qupaya) | [LinkedIn](linkedin.com/company/qupaya)
+Follow us: [Twitter](twitter.com/qupaya) | [LinkedIn](linkedin.com/company/qupaya)
